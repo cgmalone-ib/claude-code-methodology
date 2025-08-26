@@ -44,33 +44,104 @@ jobs:
               <title>Don't Tell Me How to Live My Life: Building AI-Agnostic Methodology</title>
               <meta name="description" content="How infrastructure automation constraints led to universal AI workflow innovation">
               <style>
+                  /* Light mode (default) */
+                  :root {
+                      --bg-color: #ffffff;
+                      --text-color: #333333;
+                      --code-bg: #f4f4f4;
+                      --code-border: #e1e4e8;
+                      --quote-border: #ddd;
+                      --quote-text: #666;
+                      --link-color: #0366d6;
+                      --heading-color: #24292e;
+                  }
+                  
+                  /* Dark mode */
+                  @media (prefers-color-scheme: dark) {
+                      :root {
+                          --bg-color: #0d1117;
+                          --text-color: #c9d1d9;
+                          --code-bg: #161b22;
+                          --code-border: #30363d;
+                          --quote-border: #30363d;
+                          --quote-text: #8b949e;
+                          --link-color: #58a6ff;
+                          --heading-color: #f0f6fc;
+                      }
+                  }
+                  
                   body {
                       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
                       line-height: 1.6;
-                      color: #333;
+                      color: var(--text-color);
+                      background-color: var(--bg-color);
                       max-width: 900px;
                       margin: 0 auto;
                       padding: 20px;
+                      transition: background-color 0.3s ease, color 0.3s ease;
                   }
+                  
                   pre {
-                      background: #f4f4f4;
+                      background: var(--code-bg);
+                      border: 1px solid var(--code-border);
                       padding: 15px;
                       overflow-x: auto;
                       border-radius: 5px;
                   }
+                  
                   code {
-                      background: #f4f4f4;
+                      background: var(--code-bg);
                       padding: 2px 5px;
                       border-radius: 3px;
                   }
+                  
                   blockquote {
-                      border-left: 4px solid #ddd;
+                      border-left: 4px solid var(--quote-border);
                       padding-left: 20px;
-                      color: #666;
+                      color: var(--quote-text);
                       font-style: italic;
                   }
+                  
                   h1, h2, h3 {
                       line-height: 1.2;
+                      color: var(--heading-color);
+                  }
+                  
+                  a {
+                      color: var(--link-color);
+                      text-decoration: none;
+                  }
+                  
+                  a:hover {
+                      text-decoration: underline;
+                  }
+                  
+                  strong {
+                      color: var(--heading-color);
+                  }
+                  
+                  hr {
+                      border: 0;
+                      height: 1px;
+                      background: var(--code-border);
+                      margin: 2em 0;
+                  }
+                  
+                  table {
+                      border-collapse: collapse;
+                      width: 100%;
+                      margin: 1em 0;
+                  }
+                  
+                  th, td {
+                      border: 1px solid var(--code-border);
+                      padding: 8px 12px;
+                      text-align: left;
+                  }
+                  
+                  th {
+                      background: var(--code-bg);
+                      font-weight: 600;
                   }
               </style>
           </head>
