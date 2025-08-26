@@ -1,0 +1,63 @@
+# Claude Code Methodology .gitignore
+
+# Generated release exports
+claude-methodology-*.txt
+knowledge_repo_combined.txt
+
+# Web cache directory
+.cache/
+*.cache/
+
+# Session markers (local development only)
+.claude-session-*
+
+# Local Claude Code settings (user-specific)
+.claude/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Personal notes and local configs
+notes/
+.personal/
+local-*/
+
+# Sensitive files that might accidentally be added
+*secret*
+*private*
+*.key
+*.pem
+*.tfvars
+
+# Test outputs
+test-output/
+*.test.log
+
+# Compressed archives (except intentional distributions)
+*.tar.gz
+*.zip
+*.7z
+
+# Log files
+*.log
+logs/
+
+# Node modules if we add any JS tooling
+node_modules/
+
+# Python bytecode if we add any Python tooling
+__pycache__/
+*.pyc
+*.pyo
